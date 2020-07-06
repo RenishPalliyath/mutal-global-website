@@ -1,3 +1,3 @@
 # mutal-global-website
 
-https://renishpalliyath.github.io/test/
+https://renishpalliyath.github.io/mutal-global-website/
