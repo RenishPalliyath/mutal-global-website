@@ -1,0 +1,67 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+// $mutual-global-blue:#012456;
+
+$mutual-global-blue: (
+  50 : #e7ebf3,
+  100 : #c4cde0,
+  200 : #9daccc,
+  300 : #768bb7,
+  400 : #5872a7,
+  500 : #3b5998,
+  600 : #355190,
+  700 : #2d4885,
+  800 : #263e7b,
+  900 : #192e6a,
+  A100 : #a4b9ff,
+  A200 : #7192ff,
+  A400 : #3e6bff,
+  A700 : #2558ff,
+  contrast: (
+    50 : #0000,
+    100 : #000,
+    200 : #000,
+    300 : #000,
+    400 : #fff,
+    500 : #fff,
+    600 : #fff,
+    700 : #fff,
+    800 : #fff,
+    900 : #fff,
+    A100 : #000,
+    A200 : #000,
+    A400 : #fff,
+    A700 : #fff,
+  )
+);
+
+$mutual-global-primary: mat-palette($mutual-global-blue);
+$mutual-global-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$mutual-global-warn: mat-palette($mat-red);
+
+$mutual-global-app-theme: mat-light-theme($mutual-global-primary, $mutual-global-accent, $mutual-global-warn);
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as `color` or `typography`.
+// $candy-app-theme: mat-light-theme((
+//   color: (
+//     primary: $candy-app-primary,
+//     accent: $candy-app-accent,
+//     warn: $candy-app-warn,
+//   )
+// ));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($mutual-global-app-theme);
